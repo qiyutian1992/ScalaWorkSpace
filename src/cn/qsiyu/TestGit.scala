@@ -8,5 +8,7 @@ package cn.qsiyu
   * To change this template use File | Settings | File Templates.
   */
 object TestGit {
+  def some(): Unit = {
 
+  }
 }
