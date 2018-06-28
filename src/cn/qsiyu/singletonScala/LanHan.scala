@@ -11,7 +11,7 @@ class LanHan private{
 
 object LanHan {
 
-  private var lanHan : LanHan= null
+  private var lanHan : LanHan= _
 
   def apply(): LanHan = {
     if(null == lanHan){
