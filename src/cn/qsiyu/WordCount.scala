@@ -1,9 +1,8 @@
 package cn.qsiyu
 
-object WordCount {
-  def main(args: Array[String]): Unit = {
-    val wordsArray = Array("hello tom hello jim hello jerry", "hello sheep hello tom hello qyt")
-    wordsArray.flatMap(_.split(" "))
+object WordCount extends App {
+  val wordsArray = Array("hello tom hello jim", "hello sheep hello tom hello qyt", "hello sheep hello tom hello qyt")
+  val wordCount = wordsArray.flatMap(_.split(" ")).map((_, 1)).groupBy(_._1).mapValues(_.map(_._2).sum).toList.sortBy(-_._2)
+  wordCount.toBuffer.foreach(println)
 
-  }
 }
